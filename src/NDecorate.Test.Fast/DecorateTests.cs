@@ -11,8 +11,8 @@ namespace NDecorate.Test.Fast
         {
             var query = new MyQuery();
             Assert.That(query.Execute() == "hello");
-            var decoratedQuery = query.Decorate<IQueryTypeA>(new[] {new NameAdderDecorator()});
-            Assert.That(decoratedQuery.Execute() == "hello world");
+            var decoratedQuery = query.Decorate<IQueryTypeA>(new IQueryTypeA[] { new WorldAdderDecorator(), new ExclamationAdderDecorator() });
+            Assert.That(decoratedQuery.Execute() == "hello world!");
         }
     }
 
@@ -28,16 +28,26 @@ namespace NDecorate.Test.Fast
             return "hello";
         }
 
-        public IQueryTypeA Target { get; set; }
+        public IQueryTypeA DecoratorTarget { get; set; }
     }
 
-    public class NameAdderDecorator : IQueryTypeA
+    public class WorldAdderDecorator : IQueryTypeA
     {
-        public IQueryTypeA Target { get; set; }
+        public IQueryTypeA DecoratorTarget { get; set; }
 
         public string Execute()
         {
-            return Target.Execute() + " world";
+            return DecoratorTarget.Execute() + " world";
+        }
+    }
+
+    public class ExclamationAdderDecorator : IQueryTypeA
+    {
+        public IQueryTypeA DecoratorTarget { get; set; }
+
+        public string Execute()
+        {
+            return DecoratorTarget.Execute() + "!";
         }
     }
 }

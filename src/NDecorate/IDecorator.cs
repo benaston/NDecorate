@@ -5,6 +5,6 @@
     /// </summary>
     public interface IDecorator<TSharedInterface> : IDecorateable<TSharedInterface>
     {
-        TSharedInterface Target { get; set; }
+        TSharedInterface DecoratorTarget { get; set; }
     }
 }

@@ -18,9 +18,9 @@ namespace NDecorate
                 var decorator = decoratorList[x];
                 var targetDecorateableInstance = x == 0
                                                      ? instanceToDecorate
-                                                     : decoratorList[x + 1];
+                                                     : decoratorList[x - 1];
 
-                decorator.Target = targetDecorateableInstance;
+                decorator.DecoratorTarget = targetDecorateableInstance;
 
                 if (x == decoratorList.Length - 1)
                 {
