@@ -19,3 +19,8 @@ Example
   var decoratedQuery = query.Decorate<IMyQuery>(new [] { new CacheDecorator(), new LogDecorator() });
 
 ```
+
+TODO
+=====
+ - better IOC container integration (add method to decorate all types in the container?)
+ - file-based configuration to take advantage of environment-based transforms
