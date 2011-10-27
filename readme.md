@@ -1,7 +1,7 @@
 NDecorate
 =====
 
-Enables composition of multi-functional types using the decorator pattern.
+Enables composition of multi-functional types using the decorator pattern without requiring constructor injection or a concrete inheritance chain.
 
 Example
 =====
