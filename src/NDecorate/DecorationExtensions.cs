@@ -3,9 +3,6 @@ namespace NDecorate
 {
     using System;
 
-    //add method to decorate all types in the container
-    //,once container constructed, then invoke decorate 
-    //to replace the implementations?
     public static class IDecoratableExtensions
     {
         public static TSharedInterface
