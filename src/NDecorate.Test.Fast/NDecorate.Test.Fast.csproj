@@ -47,6 +47,21 @@
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NBasicExtensionMethod">
+      <HintPath>..\packages\NBasicExtensionMethod.1.0.4292.32667\lib\net40\NBasicExtensionMethod.dll</HintPath>
+    </Reference>
+    <Reference Include="NFeature.Configuration">
+      <HintPath>..\packages\NFeature.1.0.4323.775\lib\net40\NFeature.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="NHelpfulException">
+      <HintPath>..\packages\NHelpfulException.1.0.4322.41274\lib\net40\NHelpfulException.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.2.2.1.4\lib\net40-Full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="NSure">
+      <HintPath>..\packages\NSure.1.0.4322.41374\lib\net40\NSure.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NUnit.2.5.10.11092\lib\nunit.framework.dll</HintPath>
@@ -68,13 +83,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DecorateTests.cs" />
+    <Compile Include="Feature.cs" />
+    <Compile Include="FeatureSettingNames.cs" />
+    <Compile Include="NDecorateSlowTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NDecorate\NDecorate.csproj">
-      <Project>{CC3A42A1-40F2-4106-B3AC-ADB458E56E5F}</Project>
-      <Name>NDecorate</Name>
-    </ProjectReference>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
