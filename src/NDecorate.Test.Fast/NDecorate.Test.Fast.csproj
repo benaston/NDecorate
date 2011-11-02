@@ -50,6 +50,12 @@
     <Reference Include="NBasicExtensionMethod">
       <HintPath>..\packages\NBasicExtensionMethod.1.0.4292.32667\lib\net40\NBasicExtensionMethod.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NFeature">
+      <HintPath>..\packages\NFeature.1.0.4323.775\lib\net40\NFeature.dll</HintPath>
+    </Reference>
     <Reference Include="NFeature.Configuration">
       <HintPath>..\packages\NFeature.1.0.4323.775\lib\net40\NFeature.Configuration.dll</HintPath>
     </Reference>
@@ -90,6 +96,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NDecorate\NDecorate.csproj">
+      <Project>{CC3A42A1-40F2-4106-B3AC-ADB458E56E5F}</Project>
+      <Name>NDecorate</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
