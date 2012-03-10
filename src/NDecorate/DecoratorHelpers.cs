@@ -38,17 +38,5 @@ namespace NDecorate
 
 			return decorators.ToArray();
 		}
-
-		//public static string[] GetDecoratorPrefixesFor<TSharedInterface, TFeature>(Enum feature, 
-		//                                                                           Enum decoratorSetting, 
-		//                                                                           FeatureManifest<TFeature> featureManifest,
-		//                                                                           string decoratorListDelimiter = ",")
-		//    where TFeature : struct
-		//{
-		//    var decoratorPrefixes =
-		//            feature.Setting(decoratorSetting, featureManifest).Split(
-		//                new[] { decoratorListDelimiter },
-		//                        StringSplitOptions.RemoveEmptyEntries);
-		//}
 	}
 }
