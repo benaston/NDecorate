@@ -15,10 +15,11 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with NDecorate. If not, see <http://www.gnu.org/licenses/>.
 
-namespace NDecorate.Test.Fast
+namespace NDecorate.Test.Slow
 {
 	using System;
 	using System.Linq;
+	using Fast;
 	using Moq;
 	using NFeature;
 	using NFeature.Configuration;
@@ -32,8 +33,6 @@ namespace NDecorate.Test.Fast
 	[Category("Slow")]
 	public class DecoratorHelpersTests
 	{
-		#region Setup/Teardown
-
 		[SetUp]
 		public void Setup() {
 			var availabilityChecker =
@@ -46,12 +45,6 @@ namespace NDecorate.Test.Fast
 				                                                                featureSettingService);
 			var featureManifestService = new FeatureManifestService<Feature>(manifestCreationStrategy);
 			_featureManifest = featureManifestService.GetManifest();
-		}
-
-		#endregion
-
-		private static T CastFromAnonType<T>(T entity, Object o) {
-			return (T) o;
 		}
 
 		private IFeatureManifest<Feature> _featureManifest;
