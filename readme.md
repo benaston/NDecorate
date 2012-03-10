@@ -62,7 +62,7 @@ public class MyTypeToDecorate : IMyType
 		//do something...
 	}
  
-	public IQueryTypeA DecoratorTarget { get; set; }
+	public IMyType DecoratorTarget { get; set; }
 }
   
 ```
