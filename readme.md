@@ -66,7 +66,7 @@ NOTE: configuration transforms may be used to achieve different default behavior
 <features>
 	<add name="NDecorate" settings="{ 
 		'DecoratorTypeAliases': [ { Alias: 'Cache', Type: 'CacheDecorator, MyAssembly' }, 
-								{ Alias: 'Log', Type: 'LogDecorator, MyAssembly' } ], 
+								  { Alias: 'Log', Type: 'LogDecorator, MyAssembly' } ], 
 		'MyTypeToDecorate, MyAssembly': [ 'Cache', 'Log' ] }" />
 </features>
 
