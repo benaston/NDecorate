@@ -20,7 +20,93 @@ Example
 
 ```
 
-TODO
+How to use
 =====
- - better IOC container integration (add method to decorate all types in the container?)
- - file-based configuration to take advantage of environment-based transforms
+
+Define your base type for decorating:
+
+```C#
+ 
+ public interface IMyType : IDecorator<IMyType>
+ {
+	 void DoSomething();
+	}
+ 
+```
+
+Define your type to be decorated:
+
+```C#
+
+ public class MyTypeToDecorate : IMyType
+ {
+ 		public void DoSomething() {
+ 			//do something...
+   }
+ 
+   public IQueryTypeA DecoratorTarget { get; set; }
+ }
+  
+```
+In your config:
+
+NOTE: configuration transforms may be used to achieve different default behavior for different builds. 
+
+```XML
+
+ <configSections>
+  <section name="features" type="NFeature.Configuration.FeatureConfigurationSection`1[[NDecorate.Test.Fast.Feature, NDecorate.Test.Fast]], NFeature.Configuration" />
+ </configSections>
+ <features>
+   <add name="NDecorate"
+ 			 settings="{ DecoratorTypeAliases: [ { Alias: 'Cache', Type: 'CacheDecorator, MyAssembly'},
+                                         { Alias: 'Log', Type: 'LogDecorator, MyAssembly'} ],
+										'MyTypeToDecorate, MyAssembly': ['Cache', 'Log' ],
+  </features>
+
+````
+
+Define your decorators:
+
+```C#
+
+ public class LogDecorator : IMyType
+	{
+		public IMyType DecoratorTarget { get; set; }
+
+		public void DoSomething() {
+   //some logging logic...
+   
+			return DecoratorTarget.DoSomething();
+		}
+	}
+
+	public class CacheDecorator : IMyType
+	{
+		public IMyType DecoratorTarget { get; set; }
+
+		public void DoSomething() {
+   //some caching logic...
+   
+			return DecoratorTarget.DoSomething();
+		}
+	}
+
+```
+
+Decorate your type:
+
+```C#
+
+//IContext is the service locator context, decoratorTypeNames retrieved from the config file
+var myDecoratedType = query.Decorate(DecoratorHelpers.GetDecoratorsFor<IMyType, IContext>(serviceLocator, decoratorTypeNames));
+
+```
+
+Use your type:
+
+```C#
+
+myDecoratedType.DoSomething(); //something is done, together with the transparent execution of some caching and logging logic
+
+```
