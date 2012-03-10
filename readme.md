@@ -60,9 +60,9 @@ NOTE: configuration transforms may be used to achieve different default behavior
 </configSections>
 <features>
 	<add name="NDecorate" settings="{ 
-		DecoratorTypeAliases: [ { Alias: 'Cache', Type: 'CacheDecorator, MyAssembly' }, 
+		'DecoratorTypeAliases': [ { Alias: 'Cache', Type: 'CacheDecorator, MyAssembly' }, 
 								{ Alias: 'Log', Type: 'LogDecorator, MyAssembly' } ], 
-								'MyTypeToDecorate, MyAssembly': [ 'Cache', 'Log' ] }" />
+		'MyTypeToDecorate, MyAssembly': [ 'Cache', 'Log' ] }" />
 </features>
 
 ````
