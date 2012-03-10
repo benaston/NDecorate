@@ -17,11 +17,11 @@ Example
 
 ```C#
 
-  //this object has normal functionality
-  var objectToDecorate = new MyType();
+//this object has normal functionality
+var objectToDecorate = new MyType();
   
-  //decoratedObject has normal functionality, plus client-transparent caching and logging capability
-  var decoratedObject = objectToDecorate.Decorate<IMyQuery>(new [] { new CacheDecorator(), new LogDecorator() });
+//decoratedObject has normal functionality, plus client-transparent caching and logging capability
+var decoratedObject = objectToDecorate.Decorate<IMyQuery>(new [] { new CacheDecorator(), new LogDecorator() });
 
 ```
 
