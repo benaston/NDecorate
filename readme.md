@@ -15,7 +15,7 @@ Example
 
 var o = new MyType(); //this object has normal functionality
   
-//decoratedO has normal functionality plus client-transparent caching and logging capability
+//decoratedO has normal functionality plus caching and logging capability
 var decoratedO = o.Decorate<IMyType>(new [] { new CacheDecorator(), new LogDecorator() });
 
 ```
