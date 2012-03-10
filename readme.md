@@ -23,7 +23,7 @@ Example
 How to use
 =====
 
-Define your base type for decorating:
+**1. Define your base type for decorating:**
 
 ```C#
  
@@ -34,8 +34,7 @@ public interface IMyType : IDecorator<IMyType>
  
 ```
 
-Define your type to be decorated:
-======
+**2. Define your type to be decorated:**
 
 ```C#
 
@@ -50,8 +49,7 @@ public class MyTypeToDecorate : IMyType
   
 ```
 
-In your config:
-======
+**3. In your config:**
 
 NOTE: configuration transforms may be used to achieve different default behavior for different builds. 
 
@@ -69,8 +67,7 @@ NOTE: configuration transforms may be used to achieve different default behavior
 
 ````
 
-Define your decorators:
-======
+**4. Define your decorators:**
 
 ```C#
 
@@ -98,8 +95,7 @@ public class CacheDecorator : IMyType
 
 ```
 
-Decorate your type:
-======
+**5. Decorate your type:**
 
 ```C#
 
