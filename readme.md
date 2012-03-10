@@ -104,7 +104,7 @@ var myDecoratedType = query.Decorate(DecoratorHelpers.GetDecoratorsFor<IMyType, 
 
 ```
 
-Use your type:
+**6. Use your type:**
 
 ```C#
 
