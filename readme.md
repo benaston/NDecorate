@@ -51,7 +51,7 @@ public class MyTypeToDecorate : IMyType
 
 **3. In your config:**
 
-NOTE: configuration transforms may be used to achieve different default behavior for different builds. 
+NOTE: configuration transforms may be used to achieve different default behavior for different builds or environments. 
 
 ```XML
 
