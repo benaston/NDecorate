@@ -13,10 +13,10 @@ Example
 ```C#
 
   //this query simply retrieves some stuff
-  var query = new MyQuery();
+  var objectToDecorate = new MyType();
   
-  //decoratedQuery also has caching and logging capability
-  var decoratedQuery = query.Decorate<IMyQuery>(new [] { new CacheDecorator(), new LogDecorator() });
+  //decoratedObject has client-transparent caching and logging capability
+  var decoratedObject = objectToDecorate.Decorate<IMyQuery>(new [] { new CacheDecorator(), new LogDecorator() });
 
 ```
 
@@ -27,74 +27,76 @@ Define your base type for decorating:
 
 ```C#
  
- public interface IMyType : IDecorator<IMyType>
- {
-	 void DoSomething();
-	}
+public interface IMyType : IDecorator<IMyType>
+{
+	void DoSomething();
+}
  
 ```
 
 Define your type to be decorated:
+======
 
 ```C#
 
- public class MyTypeToDecorate : IMyType
- {
- 		public void DoSomething() {
- 			//do something...
-   }
+public class MyTypeToDecorate : IMyType
+{
+	public void DoSomething() {
+		//do something...
+	}
  
-   public IQueryTypeA DecoratorTarget { get; set; }
- }
+	public IQueryTypeA DecoratorTarget { get; set; }
+}
   
 ```
+
 In your config:
+======
 
 NOTE: configuration transforms may be used to achieve different default behavior for different builds. 
 
 ```XML
 
- <configSections>
-  <section name="features" type="NFeature.Configuration.FeatureConfigurationSection`1[[NDecorate.Test.Fast.Feature, NDecorate.Test.Fast]], NFeature.Configuration" />
- </configSections>
- <features>
-   <add name="NDecorate"
- 			 settings="{ DecoratorTypeAliases: [ { Alias: 'Cache', Type: 'CacheDecorator, MyAssembly'},
-                                         { Alias: 'Log', Type: 'LogDecorator, MyAssembly'} ],
-										'MyTypeToDecorate, MyAssembly': ['Cache', 'Log' ],
-  </features>
+<configSections>
+	<section name="features" type="NFeature.Configuration.FeatureConfigurationSection`1[[NDecorate.Test.Fast.Feature, NDecorate.Test.Fast]], NFeature.Configuration" />
+</configSections>
+<features>
+	<add name="NDecorate" settings="{ DecoratorTypeAliases: [ { Alias: 'Cache', Type: 'CacheDecorator, MyAssembly'}, { Alias: 'Log', Type: 'LogDecorator, MyAssembly'} ], 'MyTypeToDecorate, MyAssembly': ['Cache', 'Log' ],
+</features>
 
 ````
 
 Define your decorators:
+======
 
 ```C#
 
- public class LogDecorator : IMyType
-	{
-		public IMyType DecoratorTarget { get; set; }
-
-		public void DoSomething() {
-   //some logging logic...
-   
-			return DecoratorTarget.DoSomething();
-		}
+public class LogDecorator : IMyType
+{
+	public void DoSomething() {
+ 		//some logging logic...
+  
+		return DecoratorTarget.DoSomething();
 	}
 
-	public class CacheDecorator : IMyType
-	{
-		public IMyType DecoratorTarget { get; set; }
+	public IMyType DecoratorTarget { get; set; }
+}
 
-		public void DoSomething() {
-   //some caching logic...
+public class CacheDecorator : IMyType
+{
+	public void DoSomething() {
+		//some caching logic...
    
-			return DecoratorTarget.DoSomething();
-		}
+		return DecoratorTarget.DoSomething();
 	}
+	
+	public IMyType DecoratorTarget { get; set; }
+}
 
 ```
 
 Decorate your type:
+======
 
 ```C#
 
