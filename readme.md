@@ -61,7 +61,10 @@ NOTE: configuration transforms may be used to achieve different default behavior
 	<section name="features" type="NFeature.Configuration.FeatureConfigurationSection`1[[NDecorate.Test.Fast.Feature, NDecorate.Test.Fast]], NFeature.Configuration" />
 </configSections>
 <features>
-	<add name="NDecorate" settings="{ DecoratorTypeAliases: [ { Alias: 'Cache', Type: 'CacheDecorator, MyAssembly'}, { Alias: 'Log', Type: 'LogDecorator, MyAssembly'} ], 'MyTypeToDecorate, MyAssembly': ['Cache', 'Log' ],
+	<add name="NDecorate" settings="{ 
+		DecoratorTypeAliases: [ { Alias: 'Cache', Type: 'CacheDecorator, MyAssembly'}, 
+					{ Alias: 'Log', Type: 'LogDecorator, MyAssembly'} ], 
+					'MyTypeToDecorate, MyAssembly': ['Cache', 'Log' ],
 </features>
 
 ````
