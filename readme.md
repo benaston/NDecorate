@@ -23,7 +23,7 @@ Example
 How to use
 =====
 
-**1. Define your base type for decorating:**
+**1. Define a base type for decorating:**
 
 ```C#
  
