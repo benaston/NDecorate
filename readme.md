@@ -13,11 +13,10 @@ Example
 
 ```C#
 
-//this object has normal functionality
-var objectToDecorate = new MyType();
+var o = new MyType(); //this object has normal functionality
   
-//decoratedObject has normal functionality, plus client-transparent caching and logging capability
-var decoratedObject = objectToDecorate.Decorate<IMyType>(new [] { new CacheDecorator(), new LogDecorator() });
+//decoratedO has normal functionality plus client-transparent caching and logging capability
+var decoratedO = o.Decorate<IMyType>(new [] { new CacheDecorator(), new LogDecorator() });
 
 ```
 
@@ -36,7 +35,7 @@ The behavior of types can be composed via JSON in your application configuration
 
 ````
 
-In the example above ```MyType``` instances are transparently configured to use both caching and logging functionality. ```MyOtherType``` instances are decorated only with logging functionality.
+In the example above ```MyType``` instances retrieved from the service locator are transparently configured to use both caching and logging functionality. ```MyOtherType``` instances are decorated only with logging functionality.
 
 
 How to use
