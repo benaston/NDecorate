@@ -99,7 +99,7 @@ public class CacheDecorator : IMyType
 
 ```C#
 
-//IContext is the service locator context, decoratorTypeNames retrieved from the config file
+//IContext is the service locator context; decoratorTypeNames are retrieved from the config file
 var myDecoratedType = query.Decorate(DecoratorHelpers.GetDecoratorsFor<IMyType, IContext>(serviceLocator, decoratorTypeNames));
 
 ```
