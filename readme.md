@@ -12,10 +12,10 @@ Example
 
 ```C#
 
-  //this query simply retrieves some stuff
+  //this object has normal functionality
   var objectToDecorate = new MyType();
   
-  //decoratedObject has client-transparent caching and logging capability
+  //decoratedObject has normal functionality, plus client-transparent caching and logging capability
   var decoratedObject = objectToDecorate.Decorate<IMyQuery>(new [] { new CacheDecorator(), new LogDecorator() });
 
 ```
