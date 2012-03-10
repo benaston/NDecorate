@@ -27,16 +27,16 @@ The behavior of types can be composed via JSON in your application configuration
 
 ```JSON
 
-	{ 
-		'DecoratorTypeAliases': [ { Alias: 'Cache', Type: 'CacheDecorator, MyAssembly' }, 
-								  { Alias: 'Log', Type: 'LogDecorator, MyAssembly' } ], 
-		'MyType, MyAssembly': [ 'Cache', 'Log' ],
-		'MyOtherType, MyAssembly': [ 'Log' ],
-	}
+{ 
+	'DecoratorTypeAliases': [ { Alias: 'Cache', Type: 'CacheDecorator, MyAssembly' }, 
+							  { Alias: 'Log', Type: 'LogDecorator, MyAssembly' } ], 
+	'MyType, MyAssembly': [ 'Cache', 'Log' ],
+	'MyOtherType, MyAssembly': [ 'Log' ]
+}
 
 ````
 
-In the example above ```MyType``` is configured to use both caching and logging functionality. ```MyOtherType``` only uses logging functionality.
+In the example above ```MyType``` instances are transparently configured to use both caching and logging functionality. ```MyOtherType``` instances are decorated only with logging functionality.
 
 
 How to use
