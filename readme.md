@@ -25,7 +25,7 @@ NDecorate is even more powerful when used with a service locator.
 
 The behavior of types can be composed via JSON in your application configuration file like so:
 
-```JSON
+```
 
 { 
 	'DecoratorTypeAliases': [ { 'Alias': 'Cache', 'Type': 'CacheDecorator, MyAssembly' }, 
