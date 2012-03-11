@@ -5,7 +5,7 @@ Enables composition of multi-functional types using the decorator pattern withou
 
 NDecorate improves the flexibility of your app and helps you localize and minimize type responsibility.
 
-If NDecorate helps you or your team develop great software please [let me know](mailto:ben@bj.ma "Ben's email address")! It will help motivate me to develop and improve NDecorate.
+If NDecorate helps you or your team develop great software please [let me know](mailto:ben@bj.ma "Ben's email address"). 
 
 
 Example
