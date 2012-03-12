@@ -9,7 +9,7 @@ If NDecorate helps you or your team develop great software please [let me know](
 
 
 Example
-=====
+--------
 
 ```C#
 
@@ -39,7 +39,7 @@ In the example above ```MyType``` instances retrieved from the service locator a
 
 
 How to use
-=====
+--------
 
 **1. Define a base type for decorating:**
 
@@ -139,6 +139,6 @@ A [2004 article on NHibernate](http://www.theserverside.net/tt/articles/showarti
 
 
 License & Copyright
-=====
+--------
 
 This software is released under the GNU Lesser GPL. It is Copyright 2012, Ben Aston. I may be contacted at ben@bj.ma.
