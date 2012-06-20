@@ -50,32 +50,33 @@
     <Reference Include="Moq, Version=4.0.10827.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
     </Reference>
-    <Reference Include="NBasicExtensionMethod, Version=1.0.4292.32667, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NBasicExtensionMethod.1.0.4292.32667\lib\net40\NBasicExtensionMethod.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="NBasicExtensionMethod, Version=1.0.4554.34582, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.4.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\NBasicExtensionMethod.1.0.4554.34582\lib\net40\NBasicExtensionMethod.dll</HintPath>
     </Reference>
-    <Reference Include="NFeature, Version=1.0.4443.35357, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NFeature.1.0.4443.35357\lib\net40\NFeature.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.7\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="NFeature.Configuration, Version=1.0.4443.33358, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="NFeature, Version=1.0.4554.36812, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NFeature.1.0.4443.35357\lib\net40\NFeature.Configuration.dll</HintPath>
+      <HintPath>..\packages\NFeature.1.0.4554.36812\lib\net40\NFeature.dll</HintPath>
     </Reference>
-    <Reference Include="NHelpfulException, Version=1.0.4409.2007, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHelpfulException.1.0.4409.2007\lib\net40\NHelpfulException.dll</HintPath>
+    <Reference Include="NFeature.Configuration, Version=1.0.4554.36639, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NFeature.1.0.4554.36812\lib\net40\NFeature.Configuration.dll</HintPath>
     </Reference>
-    <Reference Include="Ninject, Version=2.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.2.2.1.4\lib\net40-Full\Ninject.dll</HintPath>
+    <Reference Include="NHelpfulException, Version=1.0.4554.34109, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NHelpfulException.1.0.4554.34109\lib\net40\NHelpfulException.dll</HintPath>
     </Reference>
-    <Reference Include="NServiceLocator, Version=1.0.4409.4182, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NServiceLocator.1.0.4409.4182\lib\net40\NServiceLocator.dll</HintPath>
+    <Reference Include="NServiceLocator, Version=1.0.4554.34958, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NServiceLocator.1.0.4554.34958\lib\net40\NServiceLocator.dll</HintPath>
     </Reference>
-    <Reference Include="NSure, Version=1.0.4409.2144, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\NSure.1.0.4409.2144\lib\net40\NSure.dll</HintPath>
+    <Reference Include="NSure, Version=1.0.4554.34428, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NSure.1.0.4554.34428\lib\net40\NSure.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=2.6.0.12051, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

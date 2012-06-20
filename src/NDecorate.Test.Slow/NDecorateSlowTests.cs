@@ -15,10 +15,11 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with NDecorate. If not, see <http://www.gnu.org/licenses/>.
 
-namespace NDecorate.Test.Fast
+namespace NDecorate.Test.Slow
 {
 	using System;
 	using System.Linq;
+	using Fast;
 	using NFeature;
 	using NFeature.Configuration;
 	using NFeature.DefaultImplementations;

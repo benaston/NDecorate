@@ -48,9 +48,9 @@
     <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NServiceLocator, Version=1.0.4409.4182, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="NServiceLocator, Version=1.0.4554.34958, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NServiceLocator.1.0.4409.4182\lib\net40\NServiceLocator.dll</HintPath>
+      <HintPath>..\packages\NServiceLocator.1.0.4554.34958\lib\net40\NServiceLocator.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
